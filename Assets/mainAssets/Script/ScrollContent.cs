@@ -21,19 +21,22 @@ public class ScrollContent : MonoBehaviour {
 
     void OnMouseUp()
     {
-        Debug.Log("PPOO");
         int Index = PlayerPrefs.GetInt("ScrollNumber");
+        Debug.Log(Index);
         string ObjectName = EventObjects[Index].name;
 
-        Text Name = GameObject.Find("/Canvas/Scroll View/Viewport/Content/"+ObjectName+"/Name").GetComponent<Text>();
+        Text Name = GameObject.Find("/Canvas/Scroll View/Viewport/Content/GameObject/" + ObjectName+"/Name").GetComponent<Text>();
 
-        Text Date = GameObject.Find("/Canvas/Scroll View/Viewport/Content/" + ObjectName + "/Date").GetComponent<Text>();
+        Text Date = GameObject.Find("/Canvas/Scroll View/Viewport/Content/GameObject/" + ObjectName + "/Date").GetComponent<Text>();
 
-        Text Topic = GameObject.Find("/Canvas/Scroll View/Viewport/Content/" + ObjectName + "/Topic").GetComponent<Text>();
+        Text Topic = GameObject.Find("/Canvas/Scroll View/Viewport/Content/GameObject/" + ObjectName + "/Topic").GetComponent<Text>();
 
-        Text Place = GameObject.Find("/Canvas/Scroll View/Viewport/Content/" + ObjectName + "/Place").GetComponent<Text>();
+        Text Place = GameObject.Find("/Canvas/Scroll View/Viewport/Content/GameObject/" + ObjectName + "/Place").GetComponent<Text>();
 
-        Text Contacts = GameObject.Find("/Canvas/Scroll View/Viewport/Content/" + ObjectName + "/Contacts").GetComponent<Text>();
+        Text Contacts = GameObject.Find("/Canvas/Scroll View/Viewport/Content/GameObject/" + ObjectName + "/Contacts").GetComponent<Text>();
+
+        Text Question = GameObject.Find("/Canvas/Scroll View/Viewport/Content/GameObject/" + ObjectName + "/Question").GetComponent<Text>();
+
         if (Name == null)
         {
             Debug.Log("bad");
@@ -47,6 +50,7 @@ public class ScrollContent : MonoBehaviour {
         Topic.text = Input[2].text;
         Place.text = Input[3].text;
         Contacts.text = Input[4].text;
+        Question.text=Input[5].text;
 
         PlayerPrefs.SetInt("ScrollNumber", PlayerPrefs.GetInt("ScrollNumber")+1);
         Debug.Log(PlayerPrefs.GetInt("ScrollNumber"));
