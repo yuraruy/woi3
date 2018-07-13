@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Yura'sFiles/Scens/JOB 1.unity
     guid: bea64a2b83993c440b616a6e1b6ce65e
+  - enabled: 1
+    path: Assets/Yura'sFiles/Scens/Login.unity
+    guid: 326a26870e9dd9c4da4962de8414a3b0
   m_configObjects: {}
